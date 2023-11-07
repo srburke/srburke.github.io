@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.section > div {
+    scroll-snap-align: start none;
+}
+
 @font-face {
     font-family: Recoleta;
     src: url(../fonts/Recoleta-RegularDEMO.otf);
@@ -21,13 +25,27 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     width: auto !important;
-    scroll-behavior: smooth;
     overflow-x: hidden;
     position: relative;
     background-color: var(--bg);
     margin: 0rem 5% 0 5%;
     line-height: 1.75;
     font-family: "Recoleta";
+}
+
+.card span {
+    padding: .5em .25em;
+    background-color: #6b51bb;
+    border-radius: .5em;
+}
+
+.card span:hover {
+    background-color: #522acb;
+}
+
+.card span a {
+    text-decoration: none;
+    color: #fff;
 }
 
 h1 {
@@ -72,19 +90,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 8em;
-    margin: 5rem 0;
+    gap: 15em;
+    margin: 10rem 0;
     width: 100%;
 }
 
-.tech-stack {
-    padding-top: 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 2em;
-}
 
 .img-hero {
     width: 550px;
@@ -127,10 +137,12 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: fixed;
+    position: static;
     z-index: 9997;
-    padding-right: 10%;
-    padding-bottom: 5rem;
+    /* padding-right: 10%; */
+    top: 0;
+    bottom: 0;
+    /* padding-bottom: 5rem; */
 }
 
 .nav-list {
@@ -156,10 +168,10 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10rem;
+    /* margin-top: 5rem; */
     width: 100%;
     height: 130%;
-    gap: 3em;
+    /* gap: 3em; */
     background:
         linear-gradient(to right, #000000 1px, transparent 1px) 0 0,
         linear-gradient(to right, #000000 1px, transparent 1px) 0 100%,
@@ -171,6 +183,7 @@ main {
         linear-gradient(to top, #000000 1px, transparent 1px) 100% 100%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
+    scroll-padding-top: 400px;
 }
 
 .hero-text {
@@ -192,6 +205,7 @@ main {
 
 .icon {
     padding-right: 1em;
+
     color: #042514;
     /* color: #9652ad; */
     /* background: rgb(145, 92, 182, 0.8); */
@@ -199,18 +213,19 @@ main {
 }
 
 .glow-icon:hover {
-    color: #067f1e;
+    color: #522acb;
     text-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 
 .about-me {
     display: grid;
     grid-template-columns: 600px 600px;
-    margin-top: 20em;
+    /* margin: 20em 0; */
     background-color: #d1fae5;
     border-radius: 15px;
     padding-right: 2rem;
     padding-bottom: 2rem;
+    gap: 3em;
     box-shadow: 0 16px 32px rgba(22, 39, 106, 0.251);
     /* box-shadow: 0.5rem 0.5rem rgba(22, 116, 160, 0.9), -0.5rem -0.5rem #9652ad, inset 3px 3px 9px rgba(73, 73, 80, 0.3), inset -3px -3px 9px rgba(73, 73, 80, 0.3); */
 }
@@ -239,7 +254,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 20em;
+    padding-bottom: 15em;
     align-items: center;
     gap: 3em;
 }
@@ -253,7 +268,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-
 }
 
 .section-card {
@@ -267,36 +281,7 @@ body {
     gap: 20px;
     border-radius: 10px;
     box-shadow: 0 16px 32px rgba(22, 39, 106, 0.251);
-
-}
-
-/* Float four columns side by side */
-/* .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-} */
-
-/* Remove extra left and right margins, due to padding in columns */
-/* .row {
-    margin: 0 -5px;
-} */
-
-/* Clear floats after the columns */
-/* .row:after {
-    content: "";
-    display: table;
-    clear: both;
-} */
-
-/* Style the counter cards */
-.card {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-    /* this adds the "card" effect */
-    /* padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1; */
-
+    background-color: #f6f4f3;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
