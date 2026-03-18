@@ -1,5 +1,5 @@
 :root {
-    --text: #e6dafe;
+    --text: #eae5f7;
     --text50: hsl(260, 95%, 93%, 70%);
     --bg: #080118;
     --primary: #a57cfc;
@@ -36,7 +36,7 @@ html {
 
 /* General style for the entire page */
 body {
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -48,6 +48,21 @@ body {
     margin: 0rem 5% 0 5%;
     line-height: 1.75;
     font-family: "Recoleta";
+    
+}
+body::before, body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 8%;
+}
+body::before {
+      background: var(--bg);
+      filter: url(#noiseFilter);
 }
 .content-container {
     max-width: 1920px;
@@ -85,11 +100,17 @@ h2 {
     font-size: 3.158rem;
     margin: 0;
     /* 50.56px */
-    color: #e6dafe;
+    color: #eae5f7;
 }
-h2.intro-title, .color-effect, #prod-title {
+h2.intro-title, .color-effect{
     font-size: 3.75rem !important;
-    color: #e6dafe;
+    color: #eae5f7;
+    font-family: Bungee;
+}
+
+#prod-title {
+      font-size: 3.75rem !important;
+    color: var(--bg);
     font-family: Bungee;
 }
 
@@ -127,8 +148,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 15em;
-    margin: 5rem 0;
+    /* gap: 15em; */
+    /* margin: 5rem 0; */
     width: 100%;
 }
 
@@ -303,11 +324,13 @@ main {
 /* Styles for the project section */
 .projects {
     display: flex;
+    background-color: var(--text);
     flex-direction: column;
     justify-content: center;
     padding-bottom: 15em;
     align-items: center;
     gap: 3em;
+    width: 100%;
 }
 
 .card .card-body .card-title {

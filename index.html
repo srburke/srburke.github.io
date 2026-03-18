@@ -124,8 +124,18 @@
        
             </div>
 </div> -->
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+                    
+  <path fill="#eae5f7" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,128C384,117,480,75,576,80C672,85,768,139,864,138.7C960,139,1056,85,1152,74.7C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+       
+</svg>
+
+         
+
+
 
             <section class="projects" id="projects">
+      
                 <div class="content-container">
                     <h2 class="text-center" id="prod-title">Projects</h2>
                     <div class="row row-cols-1 row-cols-lg-3 row-col-xl-4">
@@ -585,7 +595,7 @@
 
                     </div>
 </div> -->
-
+     
             </section>
 
 
@@ -596,7 +606,18 @@
 
 
 
-
+  <svg>
+  <filter id='noiseFilter'>
+    <feTurbulence 
+      type='fractalNoise' 
+      baseFrequency='0.6' 
+      stitchTiles='stitch'/>
+     <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+  </filter>
+  
+</svg>
 
     </body>
 
