@@ -143,15 +143,13 @@ hr {
 }
 
 /* Styles for the main content section */
-main {
+/* main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* gap: 15em; */
-    /* margin: 5rem 0; */
     width: 100%;
-}
+} */
 
 
 
@@ -187,10 +185,10 @@ main {
 .hero-img {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 3em;
-    margin-right: 15em;
+    /* margin-right: 15em; */
 }
 
 /*typography styling */
@@ -242,24 +240,13 @@ main {
 .hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-  
-    width: 100%;
+    max-width: 1920px;
+    padding: 0 5%;
     height: auto;
     gap: 3em;
-   
-    background:
-        linear-gradient(to right, #000000 1px, transparent 1px) 0 0,
-        linear-gradient(to right, #000000 1px, transparent 1px) 0 100%,
-        linear-gradient(to left, #000000 1px, transparent 1px) 100% 0,
-        linear-gradient(to left, #000000 1px, transparent 1px) 100% 100%,
-        linear-gradient(to bottom, #000000 1px, transparent 1px) 0 0,
-        linear-gradient(to bottom, #000000 1px, transparent 1px) 100% 0,
-        linear-gradient(to top, #000000 1px, transparent 1px) 0 100%,
-        linear-gradient(to top, #000000 1px, transparent 1px) 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 25px 25px;
+ 
 }
 
 /* Styles for th hero text div */
@@ -268,7 +255,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-left: 15em;
+    margin: 0 auto;
 }
 
 .hero-icon {
@@ -295,7 +282,7 @@ main {
     padding: 0 1rem;
 }
 .icon:not(:last-of-type){
-    border-right: 2px solid var(--primary50);
+    border-right: 1px solid var(--text50);
 }
 
 .glow-icon:hover {
@@ -339,7 +326,7 @@ main {
     font-weight: 700;
     color: var(--bg);
 }
-.card .card-body .card-text {
+.card .card-body .card-text, .card .card-body ul li {
     font-size: 1.175rem;
     font-family: sans-serif;
 }
@@ -371,6 +358,27 @@ main {
     border-radius: 10px;
     box-shadow: 0 16px 32px rgba(22, 39, 106, 0.251);
     background-color: #f6f4f3;
+}
+.hvr-forward, .hvr-icon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.hvr-forward:hover .hvr-icon, .hvr-forward:focus .hvr-icon, .hvr-forward:active .hvr-icon {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+.hvr-forward:hover {
+      border-bottom: 1px dashed var(--text);
 }
 
 
@@ -425,29 +433,17 @@ main {
         align-items: stretch;
     }
 
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-    }
+   
 
     .hero-text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
         margin: 0 2rem;
     }
 
-    .img-hero {
-        width: 250px;
-        height: auto;
-        margin-left: 15em;
-        transition: none;
-
-    }
+   
 
     .nav-item span {
         font-size: 1rem;
@@ -466,7 +462,28 @@ main {
     }
 }
 
+@media screen and (max-width: 992px) {
+    h2.intro-title, .color-effect{
+    font-size: 2rem !important;
+    color: #eae5f7;
+    font-family: Bungee;
+    }
+     .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
+    }
+      .img-hero {
+        width: 320px;
+        height: auto;
+        /* margin-left: 15em; */
+        transition: none;
+
+    }
+    
+}
 
 @media screen and (max-width: 1000px) {
     body {
